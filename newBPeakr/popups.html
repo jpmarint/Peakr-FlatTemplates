@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <title>Peakr | Soluciones de compras</title>
+  </head>
+  <body style="background-color: #f4f4f4;">
+    <div class="container py-3" style="max-width: 1050px;">
+        <h3><strong>Popup read-only</strong></h3>
+        <div class="px-3 py-2 mb-4 rounded-3 shadow" style="background-color: #fcfcfc;">
+            <div class="container-fluid py-2 px-3">
+                <!--card title-->
+                <div class="row mb-3 d-flex align-items-center">
+                    <div class="col-2 px-1">
+                        <h6 class="my-auto">
+                            <i class="bi bi-square-fill" style="color: #CABDFF;"></i>
+                            <strong> Nueva Cotización</strong>
+                        </h6>
+                    </div>
+                    <div class="col-2 px-0 text-center">
+                        <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                        <label for="companyLogo">Colegio Bennet</label>
+                    </div>
+                    <div class="col w-auto px-0 text-center">
+                        <h6 class="fw-bold my-auto">HP 400 G6 Desktop Mini</h6>
+                    </div>
+                    <div class="col-2 text-center px-0">
+                        <input class="form-check-input" type="checkbox" value="" id="exactProduct" disabled checked>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Producto exacto 
+                        </label>
+                        <a title="El cliente requiere este producto preciso" class="tooltips">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                    </div>
+                    <div class="col-1 px-0">
+                        <span class="badge badge-cotizar">Por cotizar</span>
+                    </div>
+                    <div class="col-1 text-end">
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+                <!--card content-->
+                <div class="container px-2">
+                    <div class="row">
+                        <div class="col pt-3">
+                            <div class="row">
+                                <p class="popup_label mb-0">Fecha de solicitud</p>
+                                <p class="popup_label_content">10 Ene 2022</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Código de solicitud</p>
+                                <p class="popup_label_content">SOL000123</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Cantidad</p>
+                                <p class="popup_label_content">55</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Condiciones de pago</p>
+                                <p class="popup_label_content">De contado con entrega</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="row d-flex mt-5">
+                                <h6 class="fw-bold mb-3">Notas del producto
+                                    <a title="Extra info" class="tooltips">
+                                        <i class="bi bi-info-circle"></i>
+                                    </a>
+                                </h6>
+                                <p class="notes_popup_p ">
+                                    INTEL CORE i5-10500 8GB 512GB SSD
+                                    <br>
+                                    Asistencia de hardware HP in situ al siguiente día laborable, durante 5 Años, para computadoras de escritorio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col pt-3">
+                            <div class="row">
+                                <p class="popup_label mb-0">Dirección de entrega</p>
+                                <p class="popup_label_content">Calle Alferez Real nro 122 140</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Dirección (línea 2)</p>
+                                <p class="popup_label_content">Local #2a</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Ciudad de entrega</p>
+                                <p class="popup_label_content">Cali, Colombia</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Código postal</p>
+                                <p class="popup_label_content">760050</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="row mt-5">
+                                <h6 class="fw-bold">Notas de entrega</h6>
+                                <p class="notes_popup_p">
+                                    Horarios:
+                                    <br>
+                                    Entre semana: <br>
+                                    1er turno: 07:00 a 11:00 <br>
+                                    2do turno: 13:00 a 17:00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-5 seller_row pt-3 px-4 container">
+                            <div class="row mb-1">
+                                <div class="col mx-0">
+                                    <p class="popup_label mb-0">Producto 
+                                        <a title="Nombre de como lo tienes en tu catálogo" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <p class="popup_label_content">HP 400 G6 Desktop Mini</p>
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Tiempo de entrega</p>
+                                    <p class="popup_label_content">8 días</p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label mb-0">Cot. válida hasta</p>
+                                    <p class="popup_label_content">28/07/2022</p>
+                                </div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="row mb-1">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Precio unitario 
+                                        <a title="Incluye el precio de transporte" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <p class="popup_label_content">$1.500.000</p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label mb-0">Precio total bruto
+                                        <a title="Total sin IVA" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <p class="popup_label_content">$ <span class="text-end">0</span></p>
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col">
+                                    <p class="popup_label mb-0">IVA 
+                                        <a title="Escribe el porcentaje de IVA correspondiente a tu producto" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <p class="popup_label_content">19%</p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label_content mt-3 py-1">$ <span class="text-end">0</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Precio total 
+                                        <a title="Precio que se le presente al cliente" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label_content">$ <span >0</span></p>
+                                </div>                                
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="popup_label mb-0"> &nbsp;&nbsp;Retenciones
+                                        <a title="Retención de impuestos del 2.5%" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label_content">$ <span>0</span></p>
+                                </div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="popup_label mb-0">&nbsp;&nbsp; Tarifa de servicio</p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label_content">$ <span>0</span></p>
+                                </div>                                
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Recibes</p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label_content">$ <span>0</span></p>
+                                </div>                                
+                            </div>
+                            <div class="row mt-2 d-flex align-items-center">
+                                <div class="col px-1">
+                                    <h6 class="fw-bold">Notas del proveedor 
+                                        <a title="Usa este espacio para decir porque eres la mejor opción" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div class="col">
+                                    <div class="px-3 mb-1">
+                                        <input class="form-check-input mt-1" type="checkbox" value="" id="exactProduct" checked disabled>
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Producto exacto 
+                                        </label>
+                                        <a title="Marca si este es el producto exacto y NO una alternativa" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="notes_popup_p">
+                                    Garantizamos la asistencia en hardware HP durante 5 Años, para computadoras de escritorio .
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--workflow-->
+                    <div class="row mt-3">
+                        <div class="col-7 progress-track d-none d-sm-none d-md-none d-lg-block">
+                            <ul id="progressbar">
+                                <li class="step0 " id="step1" style="width: 13px;"><span class="progress_text0">Cotizado</span></li>
+                                <li class="step0 " id="step2"><span class="progress_text">Adjudicado</span></li>
+                                <li class="step0 " id="step3"><span class="progress_text">Confirmado</span></li>
+                                <li class="step0 " id="step4"><span class="progress_text">En camino</span></li>
+                                <li class="step0 " id="step5"><span class="progress_text">Entregado</span></li>
+                                <li class="step0 " id="step6"><span class="progress_text">Recibido</span></li>
+                                <li class="step0 " id="step7"><span class="progress_textEnd">Cerrado</span></li>
+                            </ul>
+                        </div>
+                        <!--Action btns-->
+                        <div class="col">
+                            <div class="d-flex flex-row">
+                                <button class="btn btn-white w-100 mx-1">No cotizar</button>
+                                <button class="btn btn-primary w-100 mx-1">Cotizar</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-3" style="max-width: 1050px;">
+        <h3><strong>Popup new-quote</strong></h3>
+        <div class="p-3 mb-4 rounded-3 shadow" style="background-color: #fcfcfc;">
+            <div class="container-fluid py-2 px-3">
+                <!--card title-->
+                <div class="row mb-3 d-flex align-items-center">
+                    <div class="col-2 px-1">
+                        <h6 class="my-auto">
+                            <i class="bi bi-square-fill" style="color: #CABDFF;"></i>
+                            <strong> Nueva Cotización</strong>
+                        </h6>
+                    </div>
+                    <div class="col-2 px-0 text-center">
+                        <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                        <label for="companyLogo">Colegio Bennet</label>
+                    </div>
+                    <div class="col w-auto px-0 text-center">
+                        <h6 class="fw-bold my-auto">HP 400 G6 Desktop Mini</h6>
+                    </div>
+                    <div class="col-2 text-center px-0">
+                        <input class="form-check-input" type="checkbox" value="" id="exactProduct" disabled checked>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Producto exacto 
+                        </label>
+                        <a title="El cliente requiere este producto preciso" class="tooltips">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                    </div>
+                    <div class="col-1 px-0">
+                        <span class="badge badge-cotizar">Por cotizar</span>
+                    </div>
+                    <div class="col-1 text-end">
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+                <!--card content-->
+                <div class="container px-2">
+                    <div class="row mt-3">
+                        <div class="col pt-3">
+                            <div class="row">
+                                <p class="popup_label mb-0">Fecha de solicitud</p>
+                                <p class="popup_label_content">10 Ene 2022</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Código de solicitud</p>
+                                <p class="popup_label_content">SOL000123</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Cantidad</p>
+                                <p class="popup_label_content" id="productQty">55</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Condiciones de pago</p>
+                                <p class="popup_label_content">De contado con entrega</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="row d-flex mt-5">
+                                <h6 class="fw-bold mb-3">Notas del producto 
+                                    <a title="Extra info" class="tooltips">
+                                        <i class="bi bi-info-circle"></i>
+                                    </a>
+                                </h6>
+                                <p class="notes_popup_p">
+                                    INTEL CORE i5-10500 8GB 512GB SSD
+                                    <br>
+                                    Asistencia de hardware HP in situ al siguiente día laborable, durante 5 Años, para computadoras de escritorio .
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col pt-3">
+                            <div class="row">
+                                <p class="popup_label mb-0">Dirección de entrega</p>
+                                <p class="popup_label_content">Calle Alferez Real nro 122 140</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Dirección (línea 2)</p>
+                                <p class="popup_label_content">Local #2a</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Ciudad de entrega</p>
+                                <p class="popup_label_content">Cali, Colombia</p>
+                            </div>
+                            <div class="row">
+                                <p class="popup_label mb-0">Código postal</p>
+                                <p class="popup_label_content">760050</p>
+                            </div>
+                            <hr class="my-5">
+                            <div class="row mt-5">
+                                <h6 class="fw-bold mb-3">Notas de entrega</h6>
+                                <p class="notes_popup_p">
+                                    Horarios:
+                                    <br>
+                                    Entre semana: <br>
+                                    1er turno: 07:00 a 11:00 <br>
+                                    2do turno: 13:00 a 17:00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-5 seller_row pt-3 px-4 container">
+                            <div class="row mb-1">
+                                <div class="col mx-0">
+                                    <p class="popup_label mb-0">Producto 
+                                        <a title="Nombre de como lo tienes en tu catálogo" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <input type="text" class="form-control py-1 my-1 form-control-quote rad8" placeholder="Nombre en tu catálogo">
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Tiempo de entrega</p>
+                                    <div class="input-group quote-group flex-nowrap px-0 form-control-quote my-1 rad8">
+                                        <input type="number" class="form-control rad8 py-1 my-1 form-control-quote" placeholder="0" aria-label="Username" aria-describedby="addon-wrapping">
+                                        <span class="input-group-text form-control-quote rad8" id="addon-wrapping">días</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label mb-0">Cot. válida hasta</p>
+                                    <input type="date" class="form-control rad8 py-1 mt-1 form-control-quote" placeholder="">
+                                </div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="row mb-1">
+                                <div class="col">
+                                    <p class="popup_label mb-0">Precio unitario 
+                                        <a title="Incluye el precio de transporte" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <div class="input-group quote-group flex-nowrap px-0 form-control-quote my-1 rad8">
+                                        <span class="input-group-text form-control-quote rad8" id="addon-wrapping">$</span>
+                                        <input type="number" class="form-control rad8 py-1 my-1 form-control-quote w-75 mx-2 px-0 priceLiveCalc" id="unitPrice" placeholder="0" aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <p class="popup_label mb-0 mt-2">IVA 
+                                        <a title="Escribe el porcentaje de IVA correspondiente a tu producto" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <div class="input-group quote-group flex-nowrap px-0 form-control-quote rad8">
+                                        <input type="number" class="form-control py-1 my-1 form-control-quote rad8 px-1 priceLiveCalc" id="ivaPercentage" placeholder="19" aria-label="Username" aria-describedby="addon-wrapping" value="19">
+                                        <span class="input-group-text form-control-quote rad8" id="addon-wrapping">%</span>
+                                    </div>
+                                    <p class="popup_label mb-0 mt-3">Precio total 
+                                        <a title="Precio que se le presente al cliente" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="popup_label mb-0">Precio total bruto
+                                        <a title="Total sin IVA" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </p>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><p class="popup_label_content my-1 py-1">$</p></td>
+                                                <td class="pricing_Td">
+                                                    <p class="popup_label_content my-1 py-1"><span id="totalGrossPrice">0</span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="popup_label_content mt-3 py-1">$</p></td>
+                                                <td class="pricing_Td">
+                                                    <p class="popup_label_content mt-3 py-1"><span id="ivaVal">0</span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><p class="popup_label_content">$</p></td>
+                                                <td class="pricing_Td">
+                                                    <p class="popup_label_content"><span id="totalPrice" >0</span></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row mt-2 d-flex align-items-center">
+                                <div class="col px-1">
+                                    <h6 class="fw-bold">Notas del proveedor 
+                                        <a title="Usa este espacio para decir porque eres la mejor opción" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div class="col">
+                                    <div class="px-3 mb-1">
+                                        <input class="form-check-input mt-1" type="checkbox" value="" id="exactProduct">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Producto exacto 
+                                        </label>
+                                        <a title="Marca si este es el producto exacto y NO una alternativa" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <textarea class="form-control mb-3 form-control-quote " name="" id="" rows="4" placeholder="Menciona porque deberían escogerte"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--workflow-->
+                    <div class="row mt-3">
+                        <div class="col-7 progress-track d-none d-sm-none d-md-none d-lg-block">
+                            <ul id="progressbar">
+                                <li class="step0 active" id="step1" style="width: 13px;"><span class="progress_text0">Cotizado</span></li>
+                                <li class="step0 active" id="step2"><span class="progress_text">Adjudicado</span></li>
+                                <li class="step0 " id="step3"><span class="progress_text">Confirmado</span></li>
+                                <li class="step0 " id="step4"><span class="progress_text">En camino</span></li>
+                                <li class="step0 " id="step5"><span class="progress_text">Entregado</span></li>
+                                <li class="step0 " id="step6"><span class="progress_text">Recibido</span></li>
+                                <li class="step0 " id="step7"><span class="progress_text">Cerrado</span></li>
+                            </ul>
+                        </div>
+                        <!--Action btns-->
+                        <div class="col">
+                            <div class="d-flex flex-row">
+                                <button class="btn btn-white w-100 mx-1">No cotizar</button>
+                                <button class="btn btn-primary w-100 mx-1">Cotizar</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-3" style="max-width: 700px;">
+        <h3><strong>Popup request</strong></h3>
+        <div class="px-3 py-2 mb-2 rounded-3 shadow" style="background-color: #fcfcfc;">
+            <div class="container-fluid pt-2 px-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>
+                            <i class="bi bi-square-fill" style="color: #CABDFF;"></i>
+                            <strong>&nbsp; &nbsp; Nueva Solicitud</strong>
+                        </h6>
+                    </div>
+                    <div class="col-md-4 offset-md-4 text-end">
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col py-3 seller_row">
+                        <div class="row">
+                            <h6 class="fw-bold">HP 400 G6 Desktop Mini</h6>
+                            <div class="row">
+                                <p class="popup_label mb-0">Refencia o SKU 
+                                    <a title="Escribe el código único del producto que buscas" class="tooltips">
+                                        <i class="bi bi-info-circle"></i>
+                                    </a>
+                                </p>
+                                <input type="text" class="form-control py-1 my-1 form-control-quote w-75 mx-2 px-2" placeholder="N° unds" aria-label="" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <input class="form-check-input" type="checkbox" value="" id="exactProduct" checked>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Acepto productos similares
+                            </label>
+                            <a title="¿Abierto a alternativas?" class="tooltips">
+                                <i class="bi bi-info-circle"></i>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <p class="popup_label mb-0">Fecha de solicitud</p>
+                            <p class="popup_label_content">28 Jul 1999</p>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <p class="popup_label mb-0">Sede de entrega</p>
+                            <select class="form-select w-75 mx-2 campus_select py-1 mb-2" aria-label="">
+                                <option value="1" selected>Principal</option>
+                                <option value="2">Avenida del río</option>
+                                <option value="3">Cañasgordas</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <p class="popup_label mb-0">Dirección de entrega</p>
+                            <p class="popup_label_content">Calle Alferez Real nro 122 140</p>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <p class="popup_label mb-0">Ciudad de entrega</p>
+                            <p class="popup_label_content">Cali, Colombia</p>
+                        </div>
+                        <hr>
+                        <div class="row mb-1">
+                            <p class="popup_label mb-0">Condiciones de pago</p>
+                            <input type="text" class="form-control py-1 my-1 form-control-quote w-75 mx-2 px-2" placeholder="De contado o días" aria-label="" aria-describedby="addon-wrapping">
+                        </div>
+                        <hr>
+                        <div class="row mb-1">
+                            <p class="popup_label mb-0">Cantidad</p>
+                            <input type="text" class="form-control py-1 my-1 form-control-quote w-75 mx-2 px-2" placeholder="N° unds" aria-label="" aria-describedby="addon-wrapping">
+                        </div>
+                    </div>
+                    <div class="col mx-2">
+                        <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                        <label for="companyLogo">Colegio Bennet</label>
+                        <div class="row mt-3 px-2">
+                            <h6 class="fw-bold mb-3 px-0">¿Que necesitas del producto?</h6>
+                            <p class="popup_label mb-1 px-0">Nota para el vendedor 
+                                <a title="Extra info" class="tooltips">
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                            </p>
+                            <textarea name="" id="" class="form-control mb-3 form-control-quote" rows="5" placeholder="Requisitos del producto"></textarea>
+                        </div>
+                        <hr>
+                        <div class="row mt-3 px-2">
+                            <h6 class="fw-bold mb-3 px-0">Notas de entrega</h6>
+                           <!-- <textarea name="" id="" class="form-control mb-3 form-control-quote" rows="5" placeholder="Entregar en horario laboral"></textarea>-->
+                           <p class="notes_popup_p">
+                            Horarios:
+                            <br>
+                            Entre semana: <br>
+                            1er turno: 07:00 a 11:00 <br>
+                            2do turno: 13:00 a 17:00
+                            </p>
+                        </div>
+                        <div class="row mx-2 px-0 mt-2">
+                            <button class="btn btn-primary w-100">Cotizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

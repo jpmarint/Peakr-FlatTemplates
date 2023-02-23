@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <title>Peakr | perfil</title>
+  </head>
+  <body>
+      <div class="container py-5" style="max-width: 700px;">
+        <h2 class="page_title">
+            <a href="solicitudes.html" style="color: #272B30;"><i class="bi bi-arrow-left-short"></i> </a>
+            Perfil de empresa
+        </h2>
+        <div class="p-3 mb-4 rounded-3 shadow" style="background-color: #fcfcfc;">
+            <div class="container-fluid py-2 px-3">
+                <div class="row">
+                    <!--Portrait image-->
+                    <div class="container-fluid col mb-2" id="portait_img">
+                    <div class="d-flex align-content-center justify-content-center h-100" id="upload_portrait_photo_btn">
+                        <div class="py-4">
+                            <button class="btn btn-white btn-sm shadow my-5"><i class="bi bi-upload"></i>&nbsp;&nbsp;Subir una foto</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div  class="row my-3 d-flex flex-row align-items-center" style="margin-top: -50px !important;">
+                        <img src="/img/business-logo.jpg" alt="Company logo" class="rounded-circle company_logo_circle_profile px-2">
+                        <button class="btn btn-white profile_img_btn mx-1 mt-5">
+                            <i class="bi bi-pencil-square"></i> &nbsp;Cambiar imagen
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form action="" method="post">
+                            <!--Profile-->
+                            <div class="row my-2">
+                                <div class="col">
+                                    <label for="name" class="form-label"> Nombre comercial 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control inputPreview" type="text" placeholder="Nombre comercial" id="companyName">
+                                </div>
+                                <div class="col">
+                                    <label for="PrincipalLocation" class="form-label">Locación principal 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="text" placeholder="Ciudad, Departamento" id="PrincipalLocation">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <label for="aboutUS" class="form-label">Sobre Nosotros 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <textarea name="" id="aboutUS" rows="3" class="form-control" style="width: 100%;"></textarea>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <label for="creation_date" class="form-label">Fecha de creación 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="date" placeholder="dd/mm/aaaa" id="creation_date">
+                                </div>
+                                <div class="col">
+                                    <label for="address" class="form-label">NIT 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="text" placeholder="NIT" id="NIT">
+                                </div>
+                                <div class="col">
+                                    <label for="website" class="form-label">Página web 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="text" placeholder="www.ejemplo.com" id="website">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <label for="numEmployee" class="form-label">Número de empleados 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <select class="form-select" aria-label="">
+                                        <option selected>Selecciona un opción</option>
+                                        <option value="1">0 - 100</option>
+                                        <option value="2">10 - 100</option>
+                                        <option value="3">100 - 1000</option>
+                                        <option value="4">5000 - 1000</option>
+                                        <option value="5">+10000</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="numEmployee" class="form-label">Ventas anuales 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <select class="form-select" aria-label="">
+                                        <option selected>Selecciona un opción</option>
+                                        <option value="1">$ 0-50</option>
+                                        <option value="2">$ 50-100</option>
+                                        <option value="3">$ 100-1000</option>
+                                        <option value="4">$ 1000-10000</option>
+                                        <option value="5">$ +100000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="my-5">
+                            <!--Password-->
+                            <div class="row my-2">
+                                <div class="col">
+                                    <h5>
+                                        <i class="bi bi-square-fill" style="color: #CABDFF;"></i>
+                                        <strong>&nbsp; &nbsp;Contraseña</strong>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-6">
+                                    <label for="actualPassword" class="form-label">Contraseña actual 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="password" id="actualPassword">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <label for="newPassword" class="form-label">Nueva contraseña 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="password" id="newPassword">
+                                </div>
+                                <div class="col">
+                                    <label for="confirmNewPassword" class="form-label">Confirmar contraseña 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <input asp-for="" class="form-control" type="password" id="confirmNewPassword">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col">
+                                    <button class="btn btn-white" type="button">Actualizar contraseña</button>
+                                </div>
+                            </div>
+                            <hr class="my-5">
+                            <!--Documents-->
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>
+                                        <i class="bi bi-square-fill" style="color: #FFBC99;"></i>
+                                        <strong>&nbsp; &nbsp; Documentos</strong>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row my-2 align-items-center">
+                                <div class="col-md-4">
+                                   <label for="" class="form-label mx-3">Rut 
+                                        <a href="" title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                                <div class="col-md-4 ms-auto">
+                                    <button class="btn btn-white btn-sm shadow-sm profile_document_btn" type="button" btn-select-file>
+                                        <i class="bi bi-cloud-upload"></i> &nbsp;&nbsp;Subir documento
+                                    </button>
+                                    <input type="file" style="display:none"> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row my-2 align-items-center">
+                                <div class="col-md-4">
+                                   <label for="" class="form-label mx-3">Cámara de comercio 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                                <div class="col-md-4 ms-auto">
+                                    <button class="btn btn-white btn-sm shadow-sm profile_document_btn" type="button" btn-select-file>
+                                        <i class="bi bi-cloud-upload"></i> &nbsp;&nbsp;Subir documento
+                                    </button>
+                                    <input type="file" style="display:none"> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row my-2 align-items-center">
+                                <div class="col-md-4">
+                                   <label for="" class="form-label mx-3">Certificado bancario 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                                <div class="col-md-4 ms-auto">
+                                    <button class="btn btn-white btn-sm shadow-sm profile_document_btn" type="button" btn-select-file>
+                                        <i class="bi bi-cloud-upload"></i> &nbsp;&nbsp;Subir documento
+                                    </button>
+                                    <input type="file" style="display:none"> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row my-2 align-items-center">
+                                <div class="col-md-4">
+                                   <label for="" class="form-label mx-3">Catálogo 
+                                        <a title="Extra info" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                                <div class="col-md-4 ms-auto">
+                                    <button class="btn btn-white btn-sm shadow-sm profile_document_btn" type="button" btn-select-file>
+                                        <i class="bi bi-cloud-upload"></i> &nbsp;&nbsp;Subir documento
+                                    </button>
+                                    <input type="file" style="display:none"> 
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row my-2 align-items-center">
+                                <div class="col-md-4">
+                                   <label for="" class="form-label mx-3">Contrato con Peakr</label>
+                                </div>
+                                <div class="col-md-4 ms-auto">
+                                    <button class="btn btn-white btn-sm shadow-sm profile_document_btn" type="button" btn-select-file>
+                                        Ver detalles
+                                    </button>
+                                </div>
+                            </div>
+                            <hr class="my-5">
+                            <!--Address-->
+                            <div class="row my-3">
+                                <div class="col">
+                                    <h5>
+                                        <i class="bi bi-square-fill" style="color: #B5E4CA;"></i>
+                                        <strong>&nbsp; &nbsp; Dirección</strong>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row px-0">
+                                <div class="col">
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label for="address" class="form-label">Dirección</label>
+                                            <input asp-for="" class="form-control inputPreview" type="text" id="address">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label for="address2" class="form-label">Dirección (línea 2) &nbsp;
+                                                <a title="Extra info" class="tooltips">
+                                                    <i class="bi bi-info-circle"></i>
+                                                </a>
+                                            </label>
+                                            <input asp-for="" class="form-control inputPreview" type="text" id="address2">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label for="zipCode" class="form-label">Código postal &nbsp;
+                                                <a title="Extra info" class="tooltips">
+                                                    <i class="bi bi-info-circle"></i>
+                                                </a>
+                                            </label>
+                                            <input asp-for="" class="form-control inputPreview" type="number" id="zipCode">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label for="region" class="form-label">Departamento </label>
+                                            <input asp-for="" class="form-control inputPreview" type="text" id="region">
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label for="city" class="form-label">Ciudad </label>
+                                            <input asp-for="" class="form-control inputPreview" type="text" id="city">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Preview-->
+                                <div class="col d-none d-sm-none d-md-block">
+                                    <label for="addressPreview" class="mt-2">Así luce tu dirección de entrega &nbsp;
+                                        <a title="Apariencia de en la etiqueta de tu empresa" class="tooltips">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                    </label>
+                                    <!--<textarea class=" mt-2" name="addressPreview" id="addressPreview" cols="33" rows="15" disabled></textarea>-->
+                                    <div class="mt-3" id="shippingPreview">
+                                        <div class="input_preview"><span class="companyName span_preview"></span></div>
+                                        <div class="input_preview">Dirección: <span class="address span_preview"></span></div>
+                                        <div class="input_preview">Dirección 2: <span class="address2 span_preview"></span></div>
+                                        <div class="input_preview">CP: <span class="zipCode span_preview"></span></div>
+                                        <div class="input_preview">Ciudad: <span class="city span_preview"></span></div>
+                                        <div class="input_preview">Región: <span class="region span_preview"></span></div>
+                                        <div class="input_preview">País: <span class="country span_preview">Colombia</span></div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <button class="btn btn-success btn-sm" type="submit">Guardar cambios</button>
+                                </div>
+                            </div>                          
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

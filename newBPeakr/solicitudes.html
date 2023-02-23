@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Peakr | Solicitudes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </head>
+  <body class="page">
+    <div class="container page_container my-4">
+        <h2 class="page_title">
+            Solicitudes
+        </h2>
+        <!--card-->
+        <div class="container-fluid page_container_fluid mt-2">
+            <div class="row p-3 align-middle">
+                <div class="col-md-4">
+                    <h5 class="card_title" id="productName">
+                        <i class="bi bi-square-fill" style="color: #B1E5FC;"></i>&nbsp; Cotizaciones
+                    </h5>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group w-100" style="height: 34px; font-size: 15px;">
+                        <span class="input-group-text px-2 card_search_input_icon"><i class="bi bi-search"></i></span>
+                        <input asp-for="" class="form-control px-1 card_search_input" type="text" name="" id="tableSearch" placeholder="Buscar cotización"  style="font-size: 14px;">
+                    </div>
+                </div>
+                <div class="col-md-3 offset-md-1">
+                  <ul class="nav nav-pills nav-pills_card mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link nav-link_card active" id="pills-pending-tab" data-bs-toggle="pill" data-bs-target="#pills-pending" type="button" role="tab" aria-controls="pills-pending" aria-selected="true">
+                        Pendiente
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link nav-link_card" id="pills-sold-tab" data-bs-toggle="pill" data-bs-target="#pills-sold" type="button" role="tab" aria-controls="pills-sold" aria-selected="false">
+                        Vendidas
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="row">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-pending" role="tabpanel" aria-labelledby="pills-pending-tab">
+                  <table class="table table-borderless table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="card_th">Fecha</th>
+                            <th scope="col" class="card_th">Estatus</th>
+                            <th scope="col" class="card_th">Producto</th>
+                            <th scope="col" class="card_th">Código</th>
+                            <th scope="col" class="card_th">Cantidad</th>
+                            <th scope="col" class="card_th">Cliente</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contentTable">
+                        <tr class="align-middle">
+                            <td class="card_td"><span class="requestDate">12 Oct 2021</span></td>
+                            <td class="card_td"><span class="requestStatus"><span class="badge badge-cotizar">Por cotizar</span></span></td>
+                            <td class="card_td">
+                              <span class="requestProductName">
+                                <p class="mb-0"> DELL XPS 123 15"</p>
+                                <label class="productRef">Ref: UI8-8934AS</label>
+                              </span>
+                            </td>
+                            <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                            <td class="card_td"><span class="requestQty">55</span> unds</td>
+                            <td class="card_td">
+                              <span class="requestClient">
+                                <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                <label for="companyLogo">Colegio Bennet</label>
+                              </span>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="card_td"><span class="requestDate">12 Oct 2021</span></td>
+                          <td class="card_td"><span class="requestStatus"><span class="badge badge-adjudicar">Por adjudicar</span></span></td>
+                          <td class="card_td">
+                            <span class="requestProductName">
+                              <p class="mb-0"> Tablet Lenovo</p>
+                              <label class="productRef">Ref: UI8-8934AS</label>
+                            </span>
+                          </td>
+                          <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                          <td class="card_td"><span class="requestQty">50</span> unds</td>
+                          <td class="card_td">
+                            <span class="requestClient">
+                              <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                              <label for="companyLogo">Colegio Bennet</label>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="card_td"><span class="requestDate">12 Nov 2021</span></td>
+                          <td class="card_td"><span class="requestStatus"><span class="badge badge-vencida">Vencida</span></span></td>
+                          <td class="card_td">
+                            <span class="requestProductName">
+                              <p class="mb-0"> Smartphone Apple</p>
+                              <label class="productRef">Ref: UI8-8934AS</label>
+                            </span>
+                          </td>
+                          <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                          <td class="card_td"><span class="requestQty">12</span> unds</td>
+                          <td class="card_td">
+                            <span class="requestClient">
+                              <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                              <label for="companyLogo">Colegio Bennet</label>
+                            </span>
+                          </td>
+                      </tr>
+                      <tr class="align-middle">
+                        <td class="card_td"><span class="requestDate">12 Dic 2021</span></td>
+                        <td class="card_td"><span class="requestStatus"><span class="badge badge-cerrada">Cerrada</span></span></td>
+                        <td class="card_td">
+                          <span class="requestProductName">
+                            <p class="mb-0"> Escritorio colegio</p>
+                            <label class="productRef">Ref: UI8-8934AS</label>
+                          </span>
+                        </td>
+                        <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                        <td class="card_td"><span class="requestQty">30</span> unds</td>
+                        <td class="card_td">
+                          <span class="requestClient">
+                            <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                            <label for="companyLogo">Colegio Bennet</label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="pills-sold" role="tabpanel" aria-labelledby="pills-sold-tab">
+                  <table class="table table-borderless table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="card_th">Fecha</th>
+                            <th scope="col" class="card_th">Estatus</th>
+                            <th scope="col" class="card_th">Producto</th>
+                            <th scope="col" class="card_th">Código</th>
+                            <th scope="col" class="card_th">Cantidad</th>
+                            <th scope="col" class="card_th">Cliente</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contentTable">
+                        <tr class="align-middle">
+                            <td class="card_td"><span class="requestDate">10 Ene 2022</span></td>
+                            <td class="card_td"><span class="requestStatus"><span class="badge badge-enviar">Por enviar</span></span></td>
+                            <td class="card_td">
+                              <span class="requestProductName">
+                                <p class="mb-0"> DELL XPS 123 15"</p>
+                                <label class="productRef">Ref: UI8-8934AS</label>
+                              </span>
+                            </td>
+                            <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                            <td class="card_td"><span class="requestQty">55</span> unds</td>
+                            <td class="card_td">
+                              <span class="requestClient">
+                                <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                <label for="companyLogo">Colegio Bennet</label>
+                              </span>
+                            </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="card_td"><span class="requestDate">10 Ene 2022</span></td>
+                          <td class="card_td"><span class="requestStatus"><span class="badge badge-camino">En camino</span></span></td>
+                          <td class="card_td">
+                            <span class="requestProductName">
+                              <p class="mb-0"> Tablet Lenovo</p>
+                              <label class="productRef">Ref: UI8-8934AS</label>
+                            </span>
+                          </td>
+                          <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                          <td class="card_td"><span class="requestQty">50</span> unds</td>
+                          <td class="card_td">
+                            <span class="requestClient">
+                              <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                              <label for="companyLogo">Colegio Bennet</label>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr class="align-middle">
+                          <td class="card_td"><span class="requestDate">10 Ene 2022</span></td>
+                          <td class="card_td"><span class="requestStatus"><span class="badge badge-entregado">Entregado</span></span></td>
+                          <td class="card_td">
+                            <span class="requestProductName">
+                              <p class="mb-0"> Smartphone Apple</p>
+                              <label class="productRef">Ref: UI8-8934AS</label>
+                            </span>
+                          </td>
+                          <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                          <td class="card_td"><span class="requestQty">12</span> unds</td>
+                          <td class="card_td">
+                            <span class="requestClient">
+                              <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                              <label for="companyLogo">Colegio Bennet</label>
+                            </span>
+                          </td>
+                      </tr>
+                      <tr class="align-middle">
+                        <td class="card_td"><span class="requestDate">10 Ene 2022</span></td>
+                        <td class="card_td"><span class="requestStatus"><span class="badge badge-recibido">Recibido</span></span></td>
+                        <td class="card_td">
+                          <span class="requestProductName">
+                            <p class="mb-0"> Escritorio colegio</p>
+                            <label class="productRef">Ref: UI8-8934AS</label>
+                          </span>
+                        </td>
+                        <td class="card_td"><span class="requestCod">SOL000123</span></td>
+                        <td class="card_td"><span class="requestQty">30</span> unds</td>
+                        <td class="card_td">
+                          <span class="requestClient">
+                            <img src="/img/bennet-logo.png" alt="Colegio Bennet Logo" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                            <label for="companyLogo">Colegio Bennet</label>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--
+<table class="table table-borderless table-striped table-hover">
+  <thead>
+      <tr>
+          <th scope="col" class="card_th">Cot. válida hasta</th>
+          <th scope="col" class="card_th">Código</th>
+          <th scope="col" class="card_th">Producto</th>
+          <th scope="col" class="card_th">Precio</th>
+          <th scope="col" class="card_th">Entrega</th>
+      </tr>
+  </thead>
+  <tbody id="contentTable">
+      <tr class="align-middle">
+          <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+          <td class="card_td"><span class="quoteCod"></span>COT000123</td>
+          <td class="card_td"><span class="quoteProductName">DELL XPS 123 15"</span></td>
+          <td class="card_td">$<span class="quotePrice">525.999,00</span></td>
+          <td class="card_td"><span class="quoteDeliver">5 </span>días</td>
+          <td class="card_td"><button class="btn btn-success" type="button"><i class="bi bi-trash-fill"></i></button></td>
+      </tr>
+      <tr class="align-middle">
+          <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+          <td class="card_td"><span class="quoteCod"></span>COT000456</td>
+          <td class="card_td"><span class="quoteProductName">HP 18"</span></td>
+          <td class="card_td">$<span class="quotePrice">120.999,00</span></td>
+          <td class="card_td"><span class="quoteDeliver">8 </span>días</td>
+          <td class="card_td"><button class="btn btn-success" type="button"><i class="bi bi-trash-fill"></i></button></td>
+      </tr>
+      <tr class="align-middle">
+          <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+          <td class="card_td"><span class="quoteCod"></span>COT000789</td>
+          <td class="card_td"><span class="quoteProductName">Lenovo 22"</span></td>
+          <td class="card_td">$<span class="quotePrice">92.999,00</span></td>
+          <td class="card_td"><span class="quoteDeliver">3 </span>días</td>
+          <td class="card_td"><button class="btn btn-success" type="button"><i class="bi bi-trash-fill"></i></button></td>
+      </tr>
+      <tr class="align-middle">
+          <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+          <td class="card_td"><span class="quoteCod"></span>COT002017</td>
+          <td class="card_td"><span class="quoteProductName">Asus 15"</span></td>
+          <td class="card_td">$<span class="quotePrice">35.999,00</span></td>
+          <td class="card_td"><span class="quoteDeliver">1 </span>días</td>
+          <td class="card_td"><button class="btn btn-success" type="button"><i class="bi bi-trash-fill"></i></button></td>
+      </tr>
+  </tbody>
+</table>
+-->

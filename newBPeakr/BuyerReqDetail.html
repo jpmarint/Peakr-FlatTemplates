@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Peakr | Inicio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
+</head>
+
+<body>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="d-flex flex-row align-middle">
+                <div class="header_toggle my-auto"> 
+                    <i class='bx bx-menu' id="header-toggle"></i> 
+                </div>
+                
+            </div>
+            <div class="d-flex flex-row align-middle">
+                <button class="notifications mx-3 my-auto" id="notifications">
+                    <i class="bi bi-bell nav_icon"></i>
+                </button>
+                <button class="header_img mx-3" id="profile"> 
+                    <img src="/img/business-logo.jpg" alt="">
+                </button>
+            </div> 
+        </header>
+        <nav class="profile_modal" id="profile_modal">
+            <ul class="profile_modal__list">
+                <li >
+                    <a href="#" class="profile_modal__list__item">
+                        Perfil de Empresa
+                    </a>
+                </li>
+                <li >
+                    <a href="#" class="profile_modal__list__item">
+                        Ajustes de seguridad
+                    </a>
+                </li>
+                <li >
+                    <a href="#" class="profile_modal__list__item">
+                        Configuración de cuenta
+                    </a>
+                </li>
+                <li >
+                    <a href="#" class="profile_modal__list__item">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile_modal_overlay" id="profile_modal_overlay"></div>
+        <nav class="notifications_modal" id="notifications_modal">
+            <div class="d-flex flex-row justify-content-between">
+                <div>
+                    <h3 class="header_modal_title">Notificaciones</h3>
+                </div>
+                <div class="my-auto mx-2 rounded-circle modal_three_dots">
+                    <b class="modal_three_dots_icon"><i class="bi bi-three-dots p-1 fw-"></i></b>
+                </div>
+            </div>
+            <table class="table my-2">
+                <tbody>
+                    <tr class="notification_modal_row">
+                        <td>
+                            <div>
+                                <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                            </div>
+                        </td>
+                        <td class="px-1">
+                            <p class="mb-0 notification_origin_p">
+                                <b><span class="">Tigo</span></b>
+                                <span class="">SOL000123</span>
+                            </p>
+                            <p class="mb-0 notification_detail_p">
+                                <span>Compró</span>
+                                <b><span>Cable 4” Fibra optica</span></b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="notification_modal_row">
+                        <td>
+                            <div>
+                                <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                            </div>
+                        </td>
+                        <td class="px-1">
+                            <p class="mb-0 notification_origin_p">
+                                <b><span class="">Tigo</span></b>
+                                <span class="">SOL000123</span>
+                            </p>
+                            <p class="mb-0 notification_detail_p">
+                                <span>Compró</span>
+                                <b><span>Cable 4” Fibra optica</span></b>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="notification_modal_row">
+                        <td>
+                            <div>
+                                <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                            </div>
+                        </td>
+                        <td class="px-1">
+                            <p class="mb-0 notification_origin_p">
+                                <b><span class="">Tigo</span></b>
+                                <span class="">SOL000123</span>
+                            </p>
+                            <p class="mb-0 notification_detail_p">
+                                <span>Compró</span>
+                                <b><span>Cable 4” Fibra optica</span></b>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </nav>
+        <div class="notifications_modal_overlay" id="notifications_modal_overlay"></div>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> 
+                    <a href="#" class="nav_logo"> 
+                        <svg width="45" height="45" class="nav_logo-icon">
+                            <use xlink:href="#icon-peakr"/>
+                        </svg>
+                        <img src="/img/Peakr-56-text.png" alt="" class="nav_logo-name"> 
+                    </a>
+                    <div class="nav_list"> 
+                        <a href="#" class="nav_link active"> 
+                            <i class='bi bi-house-door nav_icon'></i> 
+                            <span class="nav_name">Inicio</span> 
+                        </a> 
+                        <a href="#" class="nav_link"> 
+                            <i class="bi bi-tags nav_icon"></i>
+                            <span class="nav_name">Solicitudes</span> 
+                        </a> 
+                        <a href="#" class="nav_link">
+                            <i class='bx bx-bookmark nav_icon'></i> 
+                            <span class="nav_name">Billetera</span> 
+                        </a> 
+                    </div>
+                </div> 
+            </nav>
+        </div>
+        <!--Container Main-->
+        <div class="height-100 py-4">
+            <div class="container page_container my-1">
+                <h2 class="page_title">
+                    <a href="solicitudes.html" style="color: #272B30;"><i class="bi bi-arrow-left-short"></i> </a>
+                    Detalle de solicitud
+                </h2>
+                <!--Upper card-->
+                <div class="container-fluid page_container_fluid mt-3">
+                    <div class="row p-3">
+                        <div class="col-md-6">
+                            <h5 class="card_title" id="productName"><i class="bi bi-square-fill" style="color: #B5E4CA;"></i>&nbsp; Nombre de producto</h5>
+                        </div>
+                        <div class="col-md-3 offset-md-3 text-end">
+                            <h5 class="card_title" id="requestCode">SOL000123</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container px-4">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="detail_th">Fecha</th>
+                                        <th scope="col" class="detail_th">Cantidad</th>
+                                        <th scope="col" class="detail_th">Condiciones de pago</th>
+                                        <th scope="col" class="detail_th">Ciudad de entrega</th>
+                                        <th scope="col" class="detail_th">Notas del producto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="detail_td"><span id="date">25 Sep 2021</span></td>
+                                        <td class="detail_td"><span id="qty">300</span> unds</td>
+                                        <td class="detail_td"><span id="payConditions">30 días</span></td>
+                                        <td class="detail_td"><span id="city">North Providence, Rhode Island</span></td>
+                                        <td class="detail_td detail_note"><span id="productNotes">INTEL CORE i5-10500 8GB 512GB SSD<br>Asistencia de hardware HP in situ al siguiente día laborable, durante 5 Años, para computadoras de escritorio.</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Lower card-->
+                <div class="container-fluid page_container_fluid mt-2">
+                    <div class="row p-3 align-middle">
+                        <div class="col-md-3">
+                            <h5 class="card_title" id="productName">
+                                <i class="bi bi-square-fill" style="color: #B1E5FC;"></i>&nbsp; Cotizaciones
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table table-borderless table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="card_th">Cot. válida hasta</th>
+                                    <th scope="col" class="card_th">Código</th>
+                                    <th scope="col" class="card_th">Producto</th>
+                                    <th scope="col" class="card_th">Vendedor</th>
+                                    <th scope="col" class="card_th">Precio</th>
+                                    <th scope="col" class="card_th">Entrega</th>
+                                    <th scope="col" class="card_th"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="contentTable">
+                                <tr class="align-middle">
+                                    <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+                                    <td class="card_td"><span class="quoteCod"></span>COT000123</td>
+                                    <td class="card_td"><span class="quoteProductName">DELL XPS 123 15"</span></td>
+                                    <td class="card_td">
+                                        <span class="requestClient">
+                                          <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                          <label for="companyLogo">Vendedor 1</label>
+                                        </span>
+                                    </td>
+                                    <td class="card_td">$<span class="quotePrice">525.999,00</span></td>
+                                    <td class="card_td"><span class="quoteDeliver">5 </span>días</td>
+                                    <td class="card_td"><button class="btn btn-success" type="button">Comprar</button></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+                                    <td class="card_td"><span class="quoteCod"></span>COT000456</td>
+                                    <td class="card_td"><span class="quoteProductName">HP 18"</span></td>
+                                    <td class="card_td">
+                                        <span class="requestClient">
+                                          <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                          <label for="companyLogo">Vendedor 2</label>
+                                        </span>
+                                    </td>
+                                    <td class="card_td">$<span class="quotePrice">120.999,00</span></td>
+                                    <td class="card_td"><span class="quoteDeliver">8 </span>días</td>
+                                    <td class="card_td"><button class="btn btn-success" type="button">Comprar</button></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+                                    <td class="card_td"><span class="quoteCod"></span>COT000789</td>
+                                    <td class="card_td"><span class="quoteProductName">Lenovo 22"</span></td>
+                                    <td class="card_td">
+                                        <span class="requestClient">
+                                          <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                          <label for="companyLogo">Vendedor 3</label>
+                                        </span>
+                                    </td>
+                                    <td class="card_td">$<span class="quotePrice">92.999,00</span></td>
+                                    <td class="card_td"><span class="quoteDeliver">3 </span>días</td>
+                                    <td class="card_td"><button class="btn btn-success" type="button">Comprar</button></td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="card_td"><span class="quoteDate">12 Oct 2021</span></td>
+                                    <td class="card_td"><span class="quoteCod"></span>COT002017</td>
+                                    <td class="card_td"><span class="quoteProductName">Asus 15"</span></td>
+                                    <td class="card_td">
+                                        <span class="requestClient">
+                                          <img src="/img/bennet-logo.png" alt="" class="rounded-circle company_logo_circle mx-1" id="companyLogo">
+                                          <label for="companyLogo">Vendedor 4</label>
+                                        </span>
+                                    </td>
+                                    <td class="card_td">$<span class="quotePrice">35.999,00</span></td>
+                                    <td class="card_td"><span class="quoteDeliver">1 </span>días</td>
+                                    <td class="card_td"><button class="btn btn-success" type="button">Comprar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Container Main end-->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="/scripts/layout_script.js"></script>
+</body>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.66 24" id="icon-peakr">
+        <path d="M20.0969 12.5565L1.83765 23.6968C0.486236 24.52 -0.509204 23.5562 0.279316 22.1892L12.3596 1.26687C12.7249 0.636539 13.3311 0.189208 13.8899 0.046875C13.2878 0.247303 13.054 1.0066 13.5889 1.88384L15.0928 4.34939L20.0969 12.5565Z" fill="#69775F"></path>
+        <path d="M35.3472 13.3483L29.2506 23.5904C29.0852 23.8373 28.797 23.9628 28.458 23.9779C28.2943 23.9855 28.119 23.9669 27.9384 23.9256C27.5111 23.72 27.0972 23.3627 26.8126 22.8968L20.1251 12.6023L20.097 12.5576L15.0923 4.35051L13.5883 1.88495C13.0535 1.00714 13.2873 0.247833 13.8894 0.047986C14.0606 0.00499564 14.2284 -0.0101086 14.3827 0.00673899C14.409 0.00848184 14.4353 0.0142914 14.4634 0.01952H14.4692C14.4862 0.0230057 14.5031 0.0253293 14.5183 0.0311388C14.5446 0.0369483 14.5709 0.0462435 14.5955 0.0537959C14.6446 0.0706434 14.6913 0.0950433 14.7498 0.128157C14.7667 0.13571 14.7854 0.145005 14.8042 0.156043C14.8872 0.201357 15.0204 0.283272 15.111 0.335557L17.5619 1.75191C20.3063 3.33617 23.088 4.98665 25.851 6.58949C27.2778 7.41851 28.7099 8.23939 30.1484 9.04807C31.4922 9.80157 32.9132 10.4267 34.229 11.2237C34.7995 11.5677 36.307 12.0893 35.3472 13.3483Z" fill="#D1DF9A"></path>
+    </symbol>
+</svg>
+
+</html>
+

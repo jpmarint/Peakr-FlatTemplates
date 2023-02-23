@@ -1,0 +1,97 @@
+$('.search').click(function () {
+    var link ='@Html.Raw(@Url.Action("AddNewQuote", "Quote", new{@requestId =Model.RequestId}))';
+   
+$.when($.get( link, function( data ) {
+    $('#openQuote').html(data)})).then(function( x ) {
+        
+        $('#Quote_QuoteProductName').on('change', function() {
+            if (this.value == "") {
+                document.getElementById("QuoteProductName_span").innerHTML = "La dirección es requerida";
+            } else {
+                document.getElementById("QuoteProductName_span").innerHTML = "";
+            }
+        });
+
+        $('#unitPrice').on('change', function() {
+            if (this.value < 1.0) {
+                document.getElementById("PricePerUnit_Span").innerHTML = "El campo debe ser superior a 0";
+                if(this.value < 0){
+                this.value = 0;
+            }
+            } else {
+                document.getElementById("PricePerUnit_Span").innerHTML = "";
+            }
+            if (this.value == null) {
+                this.value = 0;
+            }
+        });
+        var ProductNameInputBox = document.getElementById("Quote_QuoteProductName");
+        var deliveryTimeInputBox = document.getElementById("Quote_DeliveryDeadLineInDays");
+        var priceInputBox = document.getElementById("unitPrice");
+        var taxInputBox = document.getElementById("ivaPercentage");
+        var invalidChars = [
+            "-",
+            "+",
+            "e",
+        ];
+        var invalidCharsInt = [
+            "-",
+            "+",
+            "e",
+            ".",
+            ","
+        ];
+        deliveryTimeInputBox.addEventListener("keydown", function(e) {
+            if (invalidCharsInt.includes(e.key)) {
+            e.preventDefault();
+            }
+        });
+        taxInputBox.addEventListener("keydown", function(e) {
+            if (invalidChars.includes(e.key)) {
+            e.preventDefault();
+            }
+        });
+        priceInputBox.addEventListener("keydown", function(e) {
+            if (invalidChars.includes(e.key)) {
+            e.preventDefault();
+            }
+        });
+
+        const button = document.getElementById("CotizarBtn")
+        button.disabled = true;
+        if (ProductNameInputBox.value == "" || isNaN(deliveryTimeInputBox.value) || isNan(priceInputBox) && isNan(taxInputBox)) {
+            button.disabled = false;
+        }
+        $('.priceLiveCalc').keyup(function () {
+            var qty = parseInt($('#productQty').html());
+            var taxes = parseInt($('#ivaPercentage').val());
+            var unitPrice = parseFloat($('#unitPrice').val());
+            var totalGrossPrice = qty * unitPrice;
+            var ivaValue = totalGrossPrice * (taxes/100);
+            var serviceCost = totalGrossPrice * (5 / 100);
+            var totalPrice = totalGrossPrice + ivaValue;
+            var taxWithHold = 0;
+            if (totalPrice > 980000.0) {
+                taxWithHold = totalGrossPrice * (2.5 / 100);
+            }
+
+            //BE values:
+            $('#Quote_TotalGrossPrice').val(totalGrossPrice);
+            $('#Quote_TotalIVA').val(ivaValue);
+            $('#Quote_NetCost').val(totalPrice);
+            $('#Quote_TaxWithholding').val(taxWithHold);
+            $('#Quote_ServiceCost').val(serviceCost);
+            $('#Quote_SellerIncome').val(totalGrossPrice - (taxWithHold + serviceCost));
+
+            //Preview Panel
+            $('#totalGrossPrice').html(Intl.NumberFormat('de-DE').format(totalGrossPrice.toFixed(0)));
+            $('#ivaVal').html(Intl.NumberFormat('de-DE').format(ivaValue.toFixed(0)));
+            $('#totalPrice').html(Intl.NumberFormat('de-DE').format(totalPrice.toFixed(0)));
+            $('#taxHolding').html(Intl.NumberFormat('de-DE').format(taxWithHold.toFixed(0)));
+            $('#serviceCost').html(Intl.NumberFormat('de-DE').format(serviceCost.toFixed(0)));
+            $('#sellerIncome').html(Intl.NumberFormat('de-DE').format((totalGrossPrice - (taxWithHold + serviceCost)).toFixed(0)));
+            
+        });
+        
+    });
+});
